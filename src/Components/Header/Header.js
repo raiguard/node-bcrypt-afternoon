@@ -33,7 +33,6 @@ export default class Header extends Component {
   }
 
   login() {
-    // axios POST to /auth/login here
     const { username, password } = this.state;
     axios
       .post("/auth/login", { username, password })
@@ -62,7 +61,10 @@ export default class Header extends Component {
   }
 
   logout() {
-    // axios GET to /auth/logout here
+    axios
+      .get("/auth/logout")
+      .then(() => this.props.updateUser({}))
+      .catch((err) => console.log(err));
   }
 
   render() {

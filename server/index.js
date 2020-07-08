@@ -17,6 +17,7 @@ app.use(session({ resave: true, saveUninitialized: false, secret: SESSION_SECRET
 // endpoints
 app.post("/auth/register", authController.register);
 app.post("/auth/login", authController.login);
+app.get("/auth/logout", authController.logout);
 
 // connect to database
 massive({
