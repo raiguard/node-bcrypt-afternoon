@@ -28,8 +28,23 @@ export default class Header extends Component {
     this.setState({ isAdmin: !isAdmin });
   }
 
+  resetInputs() {
+    this.setState({ username: "", password: "" });
+  }
+
   login() {
     // axios POST to /auth/login here
+    const { username, password } = this.state;
+    axios
+      .post("/auth/login", { username, password })
+      .then((res) => {
+        this.resetInputs();
+        this.props.updateUser(res.data);
+      })
+      .catch((err) => {
+        this.resetInputs();
+        alert(err.response.request.response);
+      });
   }
 
   register() {
@@ -37,11 +52,11 @@ export default class Header extends Component {
     axios
       .post("/auth/register", { username, password, isAdmin })
       .then((res) => {
-        this.setState({ username: "", password: "" });
+        this.resetInputs();
         this.props.updateUser(res.data);
       })
       .catch((err) => {
-        this.setState({ username: "", password: "" });
+        this.resetInputs();
         alert(err.response.request.response);
       });
   }
