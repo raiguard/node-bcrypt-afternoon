@@ -8,8 +8,8 @@
 }
 
 .title {
-  color: #F5CC59;
-  font-family: 'Risque', cursive;
+  color: #f5cc59;
+  font-family: "Risque", cursive;
   font-size: 48px;
   line-height: 55px;
 }
@@ -27,14 +27,14 @@
 
 .Header button {
   background: #219653;
-  color: #F5CC59;
+  color: #f5cc59;
   border: none;
   padding: 10px 20px 10px 20px;
-  font-family: 'Risque', cursive;
+  font-family: "Risque", cursive;
   font-size: 1em;
   font-weight: bold;
   letter-spacing: 2px;
-  text-shadow: 1px 1px rgba(0, 0, 0, 0.7)
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.7);
 }
 
 .Header input {
@@ -44,7 +44,7 @@
 }
 
 #reg {
-  background: #F5CC59;
+  background: #f5cc59;
   color: #219653;
 }
 

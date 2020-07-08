@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
-import './Header.css';
+import React, { Component } from "react";
+import "./Header.css";
 
 export default class Header extends Component {
   constructor() {
     super();
     this.state = {
-      username: '',
-      password: '',
-      isAdmin: false,
+      username: "",
+      password: "",
+      isAdmin: false
     };
     this.register = this.register.bind(this);
     this.login = this.login.bind(this);
@@ -58,13 +58,13 @@ export default class Header extends Component {
               type="text"
               placeholder="Username"
               value={username}
-              onChange={e => this.handleUsernameInput(e.target.value)}
+              onChange={(e) => this.handleUsernameInput(e.target.value)}
             />
             <input
               type="password"
               placeholder="Password"
               value={password}
-              onChange={e => this.handlePasswordInput(e.target.value)}
+              onChange={(e) => this.handlePasswordInput(e.target.value)}
             />
             <div className="adminCheck">
               <input type="checkbox" id="adminCheckbox" onChange={() => this.toggleAdmin()} /> <span> Admin </span>
@@ -79,4 +79,3 @@ export default class Header extends Component {
     );
   }
 }
-

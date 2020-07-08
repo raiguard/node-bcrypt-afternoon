@@ -30,7 +30,7 @@
 
 .loggedIn {
   justify-content: flex-start;
-  font-family: 'Risque', cursive;
+  font-family: "Risque", cursive;
   font-size: 10px;
 }
 
@@ -72,7 +72,7 @@
 }
 
 .addTreasure button {
-  color: #F5CC59;
-  font-family: 'Risque', cursive;
+  color: #f5cc59;
+  font-family: "Risque", cursive;
   padding: 4px;
 }
