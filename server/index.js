@@ -4,6 +4,7 @@ const session = require("express-session");
 require("dotenv").config();
 
 const authController = require("./controllers/authController");
+const treasureController = require("./controllers/treasureController");
 
 const { CONNECTION_STRING, SERVER_PORT, SESSION_SECRET } = process.env;
 
@@ -18,6 +19,7 @@ app.use(session({ resave: true, saveUninitialized: false, secret: SESSION_SECRET
 app.post("/auth/register", authController.register);
 app.post("/auth/login", authController.login);
 app.get("/auth/logout", authController.logout);
+app.get("/api/treasure/dragon", treasureController.dragonTreasure);
 
 // connect to database
 massive({
